@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
 	return (
@@ -12,22 +13,23 @@ export default function Home() {
 			</Head>
 
 			<main className="container w-screen flex-grow">
-				<section className="w-screen h-screen flex flex-col justify-center items-center text-center">
+				<Navbar />
+				<section className="w-screen h-screen flex flex-col justify-center items-center text-center border-2">
 					<h1 className="text-5xl mb-2">
 						Hi👋,
 						<br /> I am Sree
 					</h1>
 
 					<p className="text-xl mb-20">Full Stack Web Developer</p>
-					<div className="flex w-screen justify-evenly">
-						<span className="cursor-pointer hover:bg-blue-100 border-2 w-24 h-10 flex justify-center items-center rounded-lg">
+					<div className="flex justify-evenly mobile-sm:w-screen tablet:w-96 computer:w-3/5">
+						<span className="cursor-pointer transition-all hover:bg-blue-100 border-2 w-28 h-10 flex justify-center items-center rounded-lg">
 							About Me
 						</span>
-						<span className="cursor-pointer hover:bg-blue-100 border-2 w-24 h-10 flex justify-center items-center rounded-lg">
+						<span className="cursor-pointer transition-all hover:bg-blue-100 border-2 w-28 h-10 flex justify-center items-center rounded-lg">
 							Projects
 						</span>
-						<span className="cursor-pointer hover:bg-blue-100 border-2 w-24 h-10 flex justify-center items-center rounded-lg">
-							Blog
+						<span className="cursor-pointer transition-all hover:bg-blue-100 border-2 w-28 h-10 flex justify-center items-center rounded-lg">
+							<a href="https://blog.whoissree.com/">Blog</a>
 						</span>
 					</div>
 				</section>
@@ -35,9 +37,10 @@ export default function Home() {
 				<section className="w-screen h-screen flex flex-col justify-center items-center p-5">
 					<span className="text-6xl mb-2">🧑‍💻</span>
 					<h1 className="text-5xl mb-2">About Me:</h1>
-					<p className="text-2xl line leading-loose tracking-widest w-auto text-center">
-						I am Sreemannarayana Ikkurthi🙏
-						<br /> 🚀Web Developer turned Aerospace Engineer. <br />
+					<br />
+					<p className="text-2xl line leading-loose tracking-wide text-center  mobile-sm:w-screen tablet:w-96 computer:w-3/5 px-2">
+						<b>I am Sreemannarayana Ikkurthi🙏</b>
+						<br /> 🚀Aerospace Engineer to Web Developer. <br />
 						🖥️Love creating web appications.
 						<br />
 						⚡Currently helping{" "}
