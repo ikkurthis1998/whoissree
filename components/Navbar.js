@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import NavbarToggle from "./NavbarToggle";
-import Link from "next/Link";
+import Link from "next/link";
 
 const Navbar = ({ iniState }) => {
 	const [navClassName, setNavClassName] = useState(iniState);
