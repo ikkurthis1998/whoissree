@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import NavbarToggle from "./NavbarToggle";
+import Link from "next/Link";
 
-const Navbar = () => {
-	const [navClassName, setNavClassName] = useState("hidden");
+const Navbar = ({ iniState }) => {
+	const [navClassName, setNavClassName] = useState(iniState);
 	const [navOpen, setNavOpen] = useState(false);
 
 	const toggleNav = () => {
@@ -34,7 +35,9 @@ const Navbar = () => {
 			<div className={navClassName}>
 				<div className="flex mobile-sm:w-screen tablet:w-4/5 computer:w-3/5 justify-between items-center">
 					<div className="text-4xl w-1/2">
-						<b>🧑‍💻</b>
+						<Link href="/">
+							<b className="cursor-pointer">🧑‍💻</b>
+						</Link>
 					</div>
 
 					<div className="tablet:hidden w-1/2 flex justify-end">
@@ -42,7 +45,12 @@ const Navbar = () => {
 					</div>
 					<div className="ml-10 w-1/2 text-xl flex mobile-sm:flex-col tablet:flex-row justify-between mobile-sm:hidden tablet:flex w-1/2">
 						<div className="cursor-pointer">About Me</div>
-						<div className="cursor-pointer">Projects</div>
+						<Link href="/projects">
+							<a>
+								<div className="cursor-pointer">Projects</div>
+							</a>
+						</Link>
+
 						<div className="cursor-pointer">
 							<a href="https://blog.whoissree.com/">Blog</a>
 						</div>
