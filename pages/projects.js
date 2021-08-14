@@ -71,7 +71,7 @@ export default function Projects() {
 			title: "Know me?",
 			description: "A CLI quiz app to know how well you know me.",
 			live: "https://replit.com/@ikkurthis1998/knowme?embed=true#index.js",
-			source: "https://github.com/ikkurthis1998/knowme-",
+			source: "https://github.com/ikkurthis1998/knowme",
 		},
 	];
 
