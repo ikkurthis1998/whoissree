@@ -85,12 +85,12 @@ export default function Home() {
 
 				<section
 					id="aboutme"
-					className="w-screen h-screen flex flex-col justify-center items-center p-5"
+					className="w-screen flex flex-col justify-center items-center p-5"
 				>
 					<span className="text-6xl mb-2">🧑‍💻</span>
 					<h1 className="text-5xl mb-2">About Me</h1>
 					<br />
-					<p className="text-2xl line leading-loose tracking-wide text-center  mobile-sm:w-screen tablet:w-96 computer:w-3/5 px-2">
+					<p className="text-2xl line leading-loose tracking-wide text-center  mobile-sm:w-4/5 computer:w-3/5 px-2">
 						<b>I am Sreemannarayana Ikkurthi🙏</b>
 						<br />
 						🖥️Love creating web appications. <br />
@@ -108,6 +108,28 @@ export default function Home() {
 						build India&apos;s largest growing
 						<br /> electric vehicle charging network.
 					</p>
+					<div className="flex flex-col items-center">
+						<h1 className="text-3xl">Skills</h1>
+						<div className="px-5 text-xl flex flex-wrap justify-evenly mobile-sm:w-4/5 computer:w-3/5">
+							<p>||</p>
+							<p className="px-5">React JS</p>
+							<p>||</p>
+							<p className="px-5">Express JS</p>
+							<p>||</p>
+							<p className="px-5">Tailwind</p>
+							<p>||</p>
+							<p className="px-5">Next JS</p>
+							<p>||</p>
+							<p className="px-5">JavaScript</p>
+							<p>||</p>
+							<p className="px-5">CSS</p>
+							<p>||</p>
+							<p className="px-5">HTML</p>
+							<p>||</p>
+							<p className="px-5">Firebase</p>
+							<p>||</p>
+						</div>
+					</div>
 					<div className="mt-8 flex justify-evenly mobile-sm:w-screen tablet:w-96 computer:w-3/5">
 						<span className="cursor-pointer transition-all bg-red-300 hover:bg-blue-500 hover:text-white w-28 h-10 flex justify-center items-center rounded-lg">
 							<Link href="/aboutme">
