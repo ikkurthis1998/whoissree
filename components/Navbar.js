@@ -35,7 +35,7 @@ const Navbar = ({ iniState }) => {
 			<div className={navClassName}>
 				<div className="flex mobile-sm:w-screen tablet:w-4/5 computer:w-3/5 justify-between items-center">
 					<div className="text-4xl w-1/2">
-						<Link href="/">
+						<Link href="/" passHref>
 							<b className="cursor-pointer">🧑‍💻</b>
 						</Link>
 					</div>
@@ -44,15 +44,21 @@ const Navbar = ({ iniState }) => {
 						<NavbarToggle toggleNav={toggleNav} navOpen={navOpen} />
 					</div>
 					<div className="ml-10 w-1/2 text-xl flex mobile-sm:flex-col tablet:flex-row justify-between mobile-sm:hidden tablet:flex w-1/2">
-						<div className="cursor-pointer">About Me</div>
-						<Link href="/projects">
-							<a>
-								<div className="cursor-pointer">Projects</div>
-							</a>
-						</Link>
+						<div>
+							<Link href="/aboutme">
+								<a className="cursor-pointer">About Me</a>
+							</Link>
+						</div>
+						<div>
+							<Link href="/projects">
+								<a className="cursor-pointer">Projects</a>
+							</Link>
+						</div>
 
-						<div className="cursor-pointer">
-							<a href="https://blog.whoissree.com/">Blog</a>
+						<div>
+							<Link href="/blog">
+								<a className="cursor-pointer">Blog</a>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -64,13 +70,19 @@ const Navbar = ({ iniState }) => {
 				} duration-500 h-full`}
 			>
 				<div className="cursor-pointer mb-20 mt-20 hover:bg-blue-100 w-32 px-3 py-2 rounded-lg border-2 bg-white bg-opacity-100 text-center">
-					About Me
+					<Link href="/aboutme">
+						<a className="cursor-pointer">About Me</a>
+					</Link>
 				</div>
 				<div className="cursor-pointer mb-20 hover:bg-blue-100 w-32 px-3 py-2 rounded-lg border-2 bg-white bg-opacity-100 text-center">
-					Projects
+					<Link href="/projects">
+						<a className="cursor-pointer">Projects</a>
+					</Link>
 				</div>
 				<div className="cursor-pointer mb-20 hover:bg-blue-100 w-32 px-3 py-2 rounded-lg border-2 bg-white bg-opacity-100 text-center">
-					<a href="https://blog.whoissree.com/">Blog</a>
+					<Link href="/blog">
+						<a className="cursor-pointer">Blog</a>
+					</Link>
 				</div>
 			</div>
 		</>

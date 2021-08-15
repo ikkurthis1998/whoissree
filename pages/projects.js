@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Projects() {
 	const projects = [
@@ -76,32 +77,36 @@ export default function Projects() {
 	];
 
 	return (
-		<div className="flex flex-col justify-start items-center w-screen">
+		<>
 			<Navbar iniState="flex justify-center items-center h-20 w-screen items-center p-10 fixed top-0 border-2 shadow-lg bg-white" />
-			<h1 className="text-5xl mt-32 mb-10">Projects</h1>
-			{projects.map((project) => {
-				return (
-					<div
-						key={project.title}
-						className="flex border py-8 rounded-lg flex-col justify-evenly mobile-sm:w-4/5 tablet:w-4/5 computer:w-3/5 px-5 mb-10"
-					>
-						<h1 className="text-3xl mb-2">{project.title}</h1>
-						<p className="text-xl">{project.description}</p>
-						<div className="flex justify-evenly mt-5">
-							<Link href={project.live}>
-								<a className="border w-20 text-center rounded bg-green-300 h-10 flex flex-col justify-center">
-									Live
-								</a>
-							</Link>
-							<Link href={project.source}>
-								<a className="border w-28 text-center rounded bg-blue-300 h-10 flex flex-col justify-center">
-									Source Code
-								</a>
-							</Link>
+
+			<div className="flex flex-col justify-start items-center w-screen mt-32 mb-24">
+				<h1 className="text-5xl mb-10">Projects</h1>
+				{projects.map((project) => {
+					return (
+						<div
+							key={project.title}
+							className="flex border py-8 rounded-lg flex-col justify-evenly mobile-sm:w-4/5 tablet:w-4/5 computer:w-3/5 px-5 mb-10"
+						>
+							<h1 className="text-3xl mb-2">{project.title}</h1>
+							<p className="text-xl">{project.description}</p>
+							<div className="flex justify-evenly mt-5">
+								<Link href={project.live}>
+									<a className="border w-20 text-center rounded bg-green-300 h-10 flex flex-col justify-center">
+										Live
+									</a>
+								</Link>
+								<Link href={project.source}>
+									<a className="border w-28 text-center rounded bg-blue-300 h-10 flex flex-col justify-center">
+										Source Code
+									</a>
+								</Link>
+							</div>
 						</div>
-					</div>
-				);
-			})}
-		</div>
+					);
+				})}
+			</div>
+			<Footer />
+		</>
 	);
 }

@@ -1,10 +1,58 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Home() {
+	const projects = [
+		{
+			title: "Profit or Loss",
+			description: "Find out if you got profit or loss in stocks.",
+			live: "https://profit-or-loss.web.app/",
+			source: "https://github.com/ikkurthis1998/profit-or-loss",
+		},
+		{
+			title: "Birthday Palindrome",
+			description: "Check if your birthday is palindrome",
+			live: "https://birthday-palindrome.web.app/",
+			source: "https://github.com/ikkurthis1998/birthday-palindrome",
+		},
+		{
+			title: "Fun with Triangles",
+			description: "Bunch of fun stuff regarding triangles",
+			live: "https://fun-with-triangles.web.app/",
+			source: "https://github.com/ikkurthis1998/fun-with-triangles",
+		},
+		{
+			title: "Is your Birthday lucky?",
+			description: "Check if your birthday is lucky",
+			live: "https://luck-checker.web.app/",
+			source: "https://github.com/ikkurthis1998/luck-checker",
+		},
+		{
+			title: "Cash Register Manager",
+			description: "Don't have to calculate change ever again",
+			live: "https://cash-register-manager.web.app/",
+			source: "https://github.com/ikkurthis1998/cash-register",
+		},
+	];
+
+	const blogs = [
+		{
+			title: "No more Access-Control-Allow-Origin error",
+			description:
+				"Problem No 'Access-Control-Allow-Origin' header is present on the requested resource This is the error that bugged me the most in the early stages of my web development journey.😪 To know more about this error and about CORS: https://developer.moz...",
+			live: "https://blog.whoissree.com/no-more-access-control-allow-origin-error",
+		},
+		{
+			title: "Creating objects with functions, one level deeper.",
+			description:
+				"Basic functionality of function is like a computer. We input some properties, a function does what is defined inside it and gives an output. In JavaScript a majority of functions are used to create objects. It is because an object can store both Data...",
+			live: "https://blog.whoissree.com/creating-objects-with-functions-one-level-deeper",
+		},
+	];
+
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -23,28 +71,30 @@ export default function Home() {
 
 					<p className="text-xl mb-20">Full Stack Web Developer</p>
 					<div className="flex justify-evenly mobile-sm:w-screen tablet:w-96 computer:w-3/5">
-						<span className="cursor-pointer transition-all hover:bg-blue-100 border-2 w-28 h-10 flex justify-center items-center rounded-lg">
-							About Me
+						<span className="cursor-pointer transition-all hover:bg-blue-300 border-2 w-28 h-10 flex justify-center items-center rounded-lg">
+							<a href="#aboutme">About Me</a>
 						</span>
-						<span className="cursor-pointer transition-all hover:bg-blue-100 border-2 w-28 h-10 flex justify-center items-center rounded-lg">
-							<Link href="/projects">
-								<a>Projects</a>
-							</Link>
+						<span className="cursor-pointer transition-all hover:bg-blue-300 border-2 w-28 h-10 flex justify-center items-center rounded-lg">
+							<a href="#projects">Projects</a>
 						</span>
-						<span className="cursor-pointer transition-all hover:bg-blue-100 border-2 w-28 h-10 flex justify-center items-center rounded-lg">
-							<a href="https://blog.whoissree.com/">Blog</a>
+						<span className="cursor-pointer transition-all hover:bg-blue-300 border-2 w-28 h-10 flex justify-center items-center rounded-lg">
+							<a href="#blogs">Blog</a>
 						</span>
 					</div>
 				</section>
 
-				<section className="w-screen h-screen flex flex-col justify-center items-center p-5">
+				<section
+					id="aboutme"
+					className="w-screen h-screen flex flex-col justify-center items-center p-5"
+				>
 					<span className="text-6xl mb-2">🧑‍💻</span>
-					<h1 className="text-5xl mb-2">About Me:</h1>
+					<h1 className="text-5xl mb-2">About Me</h1>
 					<br />
 					<p className="text-2xl line leading-loose tracking-wide text-center  mobile-sm:w-screen tablet:w-96 computer:w-3/5 px-2">
 						<b>I am Sreemannarayana Ikkurthi🙏</b>
-						<br /> 🚀Aerospace Engineer to Web Developer. <br />
-						🖥️Love creating web appications.
+						<br />
+						🖥️Love creating web appications. <br />
+						🚀Aerospace Engineer to Web Developer.
 						<br />
 						⚡Currently helping{" "}
 						<a
@@ -58,12 +108,95 @@ export default function Home() {
 						build India&apos;s largest growing
 						<br /> electric vehicle charging network.
 					</p>
+					<div className="mt-8 flex justify-evenly mobile-sm:w-screen tablet:w-96 computer:w-3/5">
+						<span className="cursor-pointer transition-all bg-red-300 hover:bg-blue-500 hover:text-white w-28 h-10 flex justify-center items-center rounded-lg">
+							<Link href="/aboutme">
+								<a>Know more</a>
+							</Link>
+						</span>
+						<span className="cursor-pointer transition-all bg-red-300 hover:bg-blue-500 hover:text-white w-28 h-10 flex justify-center items-center rounded-lg">
+							<Link href="https://twitter.com/isree1998">
+								<a>Contact Me</a>
+							</Link>
+						</span>
+					</div>
+				</section>
+
+				<section
+					id="projects"
+					className="w-screen flex flex-col border-2 justify-center items-center p-5"
+				>
+					<span className="text-6xl mb-2">💻</span>
+					<h1 className="text-5xl mb-5">Projects</h1>
+
+					{projects.map((project) => {
+						return (
+							<div
+								key={project.title}
+								className="flex border py-8 rounded-lg flex-col justify-evenly mobile-sm:w-4/5 tablet:w-4/5 computer:w-3/5 px-5 mb-5"
+							>
+								<h1 className="text-3xl mb-2">{project.title}</h1>
+								<p className="text-xl">{project.description}</p>
+								<div className="flex justify-evenly mt-5">
+									<Link href={project.live}>
+										<a className="border w-20 text-center rounded bg-green-300 h-10 flex flex-col justify-center">
+											Live
+										</a>
+									</Link>
+									<Link href={project.source}>
+										<a className="border w-28 text-center rounded bg-blue-300 h-10 flex flex-col justify-center">
+											Source Code
+										</a>
+									</Link>
+								</div>
+							</div>
+						);
+					})}
+					<div className="flex justify-evenly mobile-sm:w-screen tablet:w-96 computer:w-3/5">
+						<span className="cursor-pointer transition-all bg-red-300 hover:bg-blue-500 hover:text-white w-28 h-10 flex justify-center items-center rounded-lg">
+							<Link href="/projects">
+								<a>Show all</a>
+							</Link>
+						</span>
+					</div>
+				</section>
+
+				<section
+					id="blogs"
+					className="w-screen flex flex-col justify-center items-center p-5 mb-24"
+				>
+					<span className="text-6xl mb-2">📰</span>
+					<h1 className="text-5xl mb-5">Blogs</h1>
+
+					{blogs.map((blog) => {
+						return (
+							<div
+								key={blog.title}
+								className="flex border py-8 rounded-lg flex-col justify-evenly mobile-sm:w-4/5 tablet:w-4/5 computer:w-3/5 px-5 mb-5"
+							>
+								<h1 className="text-3xl mb-2">{blog.title}</h1>
+								<p className="text-xl">{blog.description}</p>
+								<div className="flex justify-evenly mt-5">
+									<Link href={blog.live}>
+										<a className="border w-28 text-center rounded bg-purple-300 h-10 flex flex-col justify-center">
+											Read more
+										</a>
+									</Link>
+								</div>
+							</div>
+						);
+					})}
+					<div className="flex justify-evenly mobile-sm:w-screen tablet:w-96 computer:w-3/5">
+						<span className="cursor-pointer transition-all bg-red-300 hover:bg-blue-500 hover:text-white w-28 h-10 flex justify-center items-center rounded-lg">
+							<Link href="/blog">
+								<a>Show all</a>
+							</Link>
+						</span>
+					</div>
 				</section>
 			</main>
 
-			<footer className="flex justify-center mb-5">
-				<span className="text-xl">Made with 💖 by Sree</span>
-			</footer>
+			<Footer />
 		</div>
 	);
 }
