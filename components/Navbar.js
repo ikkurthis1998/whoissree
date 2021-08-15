@@ -3,7 +3,9 @@ import NavbarToggle from "./NavbarToggle";
 import Link from "next/link";
 
 const Navbar = ({ iniState }) => {
-	const [navClassName, setNavClassName] = useState(iniState);
+	const [navClassName, setNavClassName] = useState(
+		"flex justify-center items-center h-20 w-screen items-center p-10 fixed top-0 border-2 shadow-lg bg-white"
+	);
 	const [navOpen, setNavOpen] = useState(false);
 
 	const toggleNav = () => {

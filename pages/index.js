@@ -109,25 +109,32 @@ export default function Home() {
 						<br /> electric vehicle charging network.
 					</p>
 					<div className="flex flex-col items-center">
-						<h1 className="text-3xl">Skills</h1>
-						<div className="px-5 text-xl flex flex-wrap justify-evenly mobile-sm:w-4/5 computer:w-3/5">
-							<p>||</p>
-							<p className="px-5">React JS</p>
-							<p>||</p>
-							<p className="px-5">Express JS</p>
-							<p>||</p>
-							<p className="px-5">Tailwind</p>
-							<p>||</p>
-							<p className="px-5">Next JS</p>
-							<p>||</p>
-							<p className="px-5">JavaScript</p>
-							<p>||</p>
-							<p className="px-5">CSS</p>
-							<p>||</p>
-							<p className="px-5">HTML</p>
-							<p>||</p>
-							<p className="px-5">Firebase</p>
-							<p>||</p>
+						<h1 className="text-3xl my-2">Skills</h1>
+						<div className="tablet:px-5 text-xl flex flex-wrap justify-evenly mobile-sm:w-4/5 computer:w-3/5">
+							<p className="rounded-lg m-2 bg-blue-500 text-white px-5 border-2 w-36 text-center h-10 flex justify-center items-center">
+								React JS
+							</p>
+							<p className="rounded-lg m-2 bg-blue-500 text-white px-5 border-2 w-36 text-center h-10 flex justify-center items-center">
+								Express JS
+							</p>
+							<p className="rounded-lg m-2 bg-blue-500 text-white px-5 border-2 w-36 text-center h-10 flex justify-center items-center">
+								Tailwind
+							</p>
+							<p className="rounded-lg m-2 bg-blue-500 text-white px-5 border-2 w-36 text-center h-10 flex justify-center items-center">
+								Next JS
+							</p>
+							<p className="rounded-lg m-2 bg-blue-500 text-white px-5 border-2 w-36 text-center h-10 flex justify-center items-center">
+								JavaScript
+							</p>
+							<p className="rounded-lg m-2 bg-blue-500 text-white px-5 border-2 w-36 text-center h-10 flex justify-center items-center">
+								CSS
+							</p>
+							<p className="rounded-lg m-2 bg-blue-500 text-white px-5 border-2 w-36 text-center h-10 flex justify-center items-center">
+								HTML
+							</p>
+							<p className="rounded-lg m-2 bg-blue-500 text-white px-5 border-2 w-36 text-center h-10 flex justify-center items-center">
+								Firebase
+							</p>
 						</div>
 					</div>
 					<div className="mt-8 flex justify-evenly mobile-sm:w-screen tablet:w-96 computer:w-3/5">
