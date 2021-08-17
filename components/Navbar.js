@@ -40,9 +40,7 @@ const Navbar = ({ iniState }) => {
 				<div className="flex mobile-sm:w-screen tablet:w-4/5 computer:w-3/5 justify-between items-center">
 					<div className="text-4xl w-1/2">
 						<Link href="/" passHref>
-							<b className="cursor-pointer">
-								<FontAwesomeIcon icon={faSpider} className="text-xl" />
-							</b>
+							<b className="cursor-pointer">🕷️</b>
 						</Link>
 					</div>
 
