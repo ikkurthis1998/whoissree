@@ -41,7 +41,7 @@ const Navbar = ({ iniState }) => {
 					<div className="text-4xl w-1/2">
 						<Link href="/" passHref>
 							<b className="cursor-pointer">
-								<FontAwesomeIcon icon={faSpider} />
+								<FontAwesomeIcon icon={faSpider} className="text-xl" />
 							</b>
 						</Link>
 					</div>
