@@ -91,7 +91,7 @@ export default function Home() {
 					<h1 className="text-5xl mb-2">About Me</h1>
 					<br />
 					<p className="text-2xl line leading-loose text-center  mobile-sm:w-4/5 computer:w-3/5 px-2">
-						<b>I am Sreemannarayana Ikkurthi🙏</b>
+						I am <span className="font-medium">Sreemannarayana Ikkurthi</span>🙏
 						<br />
 						🖥️Love creating web appications. <br />
 						🚀Aerospace Engineer to Web Developer.
