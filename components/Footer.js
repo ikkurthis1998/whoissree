@@ -19,8 +19,8 @@ export default function Footer() {
 				<a href="https://github.com/ikkurthis1998">
 					<FontAwesomeIcon icon={faGithub} className="text-xl" />
 				</a>
-				<a href="https://whoissree.com">
-					<FontAwesomeIcon icon={faSpider} className="text-xl" />
+				<a href="https://whoissree.com" className="text-lg">
+					🕷️
 				</a>
 			</div>
 			<span className="mt-1 mobile-sm:w-screen tablet:w-1/2 mobile-sm:text-center tablet:text-right">
