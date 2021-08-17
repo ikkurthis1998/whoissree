@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import NavbarToggle from "./NavbarToggle";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpider } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = ({ iniState }) => {
 	const [navClassName, setNavClassName] = useState(
@@ -38,7 +40,9 @@ const Navbar = ({ iniState }) => {
 				<div className="flex mobile-sm:w-screen tablet:w-4/5 computer:w-3/5 justify-between items-center">
 					<div className="text-4xl w-1/2">
 						<Link href="/" passHref>
-							<b className="cursor-pointer">🧑‍💻</b>
+							<b className="cursor-pointer">
+								<FontAwesomeIcon icon={faSpider} />
+							</b>
 						</Link>
 					</div>
 

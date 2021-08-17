@@ -63,7 +63,7 @@ export default function Home() {
 
 			<main className="container w-screen flex-grow">
 				<Navbar iniState="hidden" />
-				<section className="w-screen h-screen flex flex-col justify-center items-center text-center border-2">
+				<section className="bg-gray-50 w-screen h-screen flex flex-col justify-center items-center text-center">
 					<h1 className="text-5xl mb-2">
 						Hi👋,
 						<br /> I am Sree
@@ -85,12 +85,12 @@ export default function Home() {
 
 				<section
 					id="aboutme"
-					className="w-screen flex flex-col justify-center items-center p-5"
+					className="w-screen flex flex-col justify-center items-center py-14"
 				>
 					<span className="text-6xl mb-2">🧑‍💻</span>
 					<h1 className="text-5xl mb-2">About Me</h1>
 					<br />
-					<p className="text-2xl line leading-loose tracking-wide text-center  mobile-sm:w-4/5 computer:w-3/5 px-2">
+					<p className="text-2xl line leading-loose text-center  mobile-sm:w-4/5 computer:w-3/5 px-2">
 						<b>I am Sreemannarayana Ikkurthi🙏</b>
 						<br />
 						🖥️Love creating web appications. <br />
@@ -109,8 +109,8 @@ export default function Home() {
 						<br /> electric vehicle charging network.
 					</p>
 					<div className="flex flex-col items-center">
-						<h1 className="text-3xl my-2">Skills</h1>
-						<div className="tablet:px-5 text-xl flex flex-wrap justify-evenly mobile-sm:w-4/5 computer:w-3/5">
+						<h1 className="text-3xl mt-3 mb-2 font-medium">Skills</h1>
+						<div className="tablet:px-5 text-xl flex flex-wrap justify-evenly mobile-sm:w-screen computer:w-3/5 mobile-sm:text-lg">
 							<p className="rounded-lg m-2 bg-blue-500 text-white px-5 border-2 w-36 text-center h-10 flex justify-center items-center">
 								React JS
 							</p>
@@ -153,7 +153,7 @@ export default function Home() {
 
 				<section
 					id="projects"
-					className="w-screen flex flex-col border-2 justify-center items-center p-5"
+					className="bg-gray-50 w-screen flex flex-col justify-center items-center py-14"
 				>
 					<span className="text-6xl mb-2">💻</span>
 					<h1 className="text-5xl mb-5">Projects</h1>
@@ -192,7 +192,7 @@ export default function Home() {
 
 				<section
 					id="blogs"
-					className="w-screen flex flex-col justify-center items-center p-5 mb-24"
+					className="w-screen flex flex-col justify-center items-center py-14"
 				>
 					<span className="text-6xl mb-2">📰</span>
 					<h1 className="text-5xl mb-5">Blogs</h1>
