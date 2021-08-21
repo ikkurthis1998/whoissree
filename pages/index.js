@@ -3,6 +3,12 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faGithub,
+	faLinkedinIn,
+	faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
 	const projects = [
@@ -69,8 +75,28 @@ export default function Home() {
 						<br /> I am Sree
 					</h1>
 
-					<p className="text-xl mb-20">Full Stack Web Developer</p>
-					<div className="flex justify-evenly mobile-sm:w-screen tablet:w-96 computer:w-3/5">
+					<p className="text-xl">Full Stack Web Developer</p>
+					<div className="my-10 flex justify-between items-center mobile-sm:w-2/5 tablet:w-1/4">
+						<a href="https://twitter.com/isree1998">
+							<FontAwesomeIcon
+								icon={faTwitter}
+								className="mobile-sm:w-5 tablet:w-6"
+							/>
+						</a>
+						<a href="https://www.linkedin.com/in/ikkurthis1998/">
+							<FontAwesomeIcon
+								icon={faLinkedinIn}
+								className="mobile-sm:w-5 tablet:w-6"
+							/>
+						</a>
+						<a href="https://github.com/ikkurthis1998">
+							<FontAwesomeIcon
+								icon={faGithub}
+								className="mobile-sm:w-5 tablet:w-6"
+							/>
+						</a>
+					</div>
+					<div className="flex justify-evenly mobile-sm:w-screen tablet:w-5/6 computer:w-3/5">
 						<span className="cursor-pointer transition-all hover:bg-blue-300 border-2 w-28 h-10 flex justify-center items-center rounded-lg">
 							<a href="#aboutme">About Me</a>
 						</span>
